@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--<script src="client.js" defer></script>-->
+  <head>
+      <title>Makena's Computational Art</title>
+      
+      <script type="text/javascript" src="pageactions.js"></script>
+      <script type="text/javascript" src="p5embeds.js"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+      <link rel="stylesheet" href="myStyle.css"/>
+  </head>
+  
+  <body>
+    
+    <div class="container">
+      
+      <h1 class="container my-container animated slideInLeft">Makena's Computational Art</h1>
+    
+      <!--Section for Generative Artistry Tutorials-->
+      <h3 class="container my-container animated slideInLeft section-title-one" onclick="hideSection('generative-artistry-section')" style="cursor:pointer">
+        <svg id="generative-artistry-section-arrow-right" class="bi bi-chevron-right" width="32" height="32" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/>
+        </svg>
+        <svg id="generative-artistry-section-arrow-down" class="bi bi-chevron-right" width="32" height="32" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display:none">
+          <path fill-rule="evenodd" d="M3.646 6.646a.5.5 0 01.708 0L10 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+        </svg>
+        From Generative Artistry Tutorials
+      </h3>
+      <div class="row my-container" id="generative-artistry-section" style="display:none">
+        <div class="col-3">
+          <div class="list-group list-group-flush">
+            <!--<a class="list-group-item list-group-item-action my-link" href="#" onclick="clearCanvas()" style="font-weight: bold">CLEAR</a>-->
+            <a class="list-group-item list-group-item-action my-link" href="#" onclick="tiledLines()">TILED LINES</a>
+            <a class="list-group-item list-group-item-action my-link" href="#" onclick="joyDivision()">JOY DIVISION</a>
+            <a class="list-group-item list-group-item-action my-link" href="#" onclick="cubicDisarray()">CUBIC DISARRAY</a>
+            <a class="list-group-item list-group-item-action my-link" href="#" onclick="triangularMesh()">TRIANGULAR MESH</a>
+          </div>   
+        </div>
+        <div class="col">
+          <section><canvas ></canvas></section>
+          <section><text id="caption"></text></section>
+        </div>
+      </div>
+      
+      <!--Section for p5 stuff-->
+      <h3 class="container my-container animated slideInLeft section-title-two" onclick="hideSection('p5-projects-section')" style="cursor:pointer">
+        <svg id="p5-projects-section-arrow-right" class="bi bi-chevron-right" width="32" height="32" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/>
+        </svg>
+        <svg id="p5-projects-section-arrow-down" class="bi bi-chevron-right" width="32" height="32" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display:none">
+          <path fill-rule="evenodd" d="M3.646 6.646a.5.5 0 01.708 0L10 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+        </svg>
+        From P5 Editor
+      </h3>
+      <div class="row my-container" id="p5-projects-section" style="display:none">
+        <div class="col-3">
+          <div class="list-group list-group-flush">
+            <a class="list-group-item list-group-item-action my-link" href="#" onclick="showP5Embed('p5-chaotic-circles')">CHAOTIC CIRCLES</a>
+            <a class="list-group-item list-group-item-action my-link" href="#" onclick="showP5Embed('p5-create-circles')">CREATE CIRCLES</a>
+            <a class="list-group-item list-group-item-action my-link" href="#" onclick="showP5Embed('p5-chase-dot')">CHASE DOT GAME</a>
+            <a class="list-group-item list-group-item-action my-link" href="#" onclick="showP5Embed('p5-random-dots')">RANDOM DOT GAME</a>
+          </div>   
+        </div>
+        <div class="col">
+          <section>
+             <iframe id="p5-chaotic-circles" width="600" height = "600" style="display:none" src="https://editor.p5js.org/kenakingkong/embed/h0U8Lq7l"></iframe>
+             <iframe id="p5-create-circles" width="600" height = "600" style="display:none" src="https://editor.p5js.org/kenakingkong/embed/FHMKFrrWM"></iframe>
+             <iframe id="p5-chase-dot" width="600" height = "600" style="display:none" src="https://editor.p5js.org/kenakingkong/embed/oE5MWY1Yg"></iframe>
+             <iframe id="p5-random-dots" width="600" height = "600" style="display:none" src="https://editor.p5js.org/kenakingkong/embed/8RoofrZnY"></iframe>
+          </section>
+          <section><text id="caption"></text></section>
+        </div>
+      </div>
+      
+      
+    </div>
+
+    <script type="text/javascript" src="setupcanvas.js"></script>
+    <script type="text/javascript" src="tiledlines.js" defer></script>
+    <script type="text/javascript" src="joydivision.js" defer></script>
+    <script type="text/javascript" src="cubicdisarray.js" defer></script>
+    <script type="text/javascript" src="triangularmesh.js" defer></script>
+
+  </body>
+  
+</html>
