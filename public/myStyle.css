@@ -1,0 +1,24 @@
+.my-container {
+  padding-top: 20px;
+}
+
+.my-buffer-line {
+  padding: 20px;
+  margin: 20px;
+}
+
+
+.my-link {
+  color: black;
+}
+
+.my-link:hover{
+  text-decoration: none;
+  color:black;
+  font-weight: bold;
+}
+
+
+h1{ animation-delay: .5s }
+.section-title-one { animation-delay: 1s }
+.section-title-two { animation-delay: 1.5s }
